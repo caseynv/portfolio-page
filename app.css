@@ -489,6 +489,12 @@ hr {
     background-size: cover;
     background-position: center;
 }
+.ecomm{
+    background: url(images/screenshots/ecomm.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .send-animation{
     background: url(images/screenshots/advice.png) no-repeat;
     background-size: cover;
