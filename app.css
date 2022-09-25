@@ -520,6 +520,9 @@ hr {
     background-size: cover;
     background-position: center;
 }
+.warning{
+    color: red;
+}
 .project-name-holder {
     position: absolute;
     left: 0;
