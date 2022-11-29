@@ -7,14 +7,10 @@
 
 :root {
     --dark-purple: #211329;
-    /* --dark-purple: #170820; */
     --light-purple: #331943;
-    /* --very-light-purple: #C35EFF; */
     --very-light-purple: #c147d1;
     --yellow: #FFDA61;
-
-    --text-color: #edd0ff;
-
+    --text-color: #fff;
     --container-width: 85%;
     --lg-space: 50px;
     --md-space: 35px;
@@ -94,13 +90,10 @@ html {
 }
 
 body{
-    /* background: url(images/naru-logo-backdrop-pattern.png) no-repeat;
-    background-size: 600px;
-    background-position-y: 100vh; */
+    
     background-color: var(--dark-purple);
     color: var(--text-color);
-    /* font-family: 'Raleway', sans-serif; */
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Anek Devanagari', sans-serif;
     font-weight: 300;
     font-size: 14px;
 }
@@ -127,8 +120,6 @@ button {
 }
 .photo-holder {
     position: absolute;
-    /* background-size: contain;
-    background-position: center; */
     width: 80%;
     max-width: 800px;
     height: 70%;
@@ -145,14 +136,11 @@ button {
 
 .pattern {
     position: fixed;
-    /* border: 1px solid var(--yellow); 
-    top: 55%; */
     left: -50px;
     bottom: 0;
     width: 70%;
     max-width: 750px;
     height: 300px;
-    background: url(images/naru-logo-backdrop-pattern.png) no-repeat;
     background-size: cover;
     background-position: bottom left;
     opacity: 0.1;
@@ -172,8 +160,6 @@ button {
     left: 0;
     z-index: 10;
     background-color: var(--dark-purple);
-   /* border: 1px solid yellow;
-    width: var(--container-width);*/
     width: 100%;
     padding: 0 7.8%;
     display: flex;
@@ -197,7 +183,6 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid var(--yellow); */
     width: 400px;
 }
 .nav-skills,
@@ -222,18 +207,11 @@ button {
     color: var(--yellow);
     border: 1px solid var(--yellow);
 }
-/* .nav-say-hello:hover .nav-say-hello-text {
-    color: var(--yellow);
-}
-.nav-say-hello-text {
-    color: var(--dark-purple);
-} */
+
 .main {
     margin-top: 140px;
-    /* border: 1px solid var(--very-light-purple); */
 }
 .intro {
-    /* border: 1px solid var(--yellow); */
     text-align: center;
     margin: 0 auto;
 }
@@ -372,6 +350,18 @@ hr {
     background-size: 80%;
     background-position: center;
 }
+
+.typescript-logo {
+    background: url(images/skills-icons/typescript.png) no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+.nextjs-logo {
+    background: url(images/skills-icons/nextjs.jpg) no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
 .python-logo {
     background: url(images/skills-icons/Python.png) no-repeat;
     background-size: 80%;
@@ -437,7 +427,6 @@ hr {
 }
 .works-as-a-developer,
 .works-as-a-designer {
-    /* border: 1px solid var(--yellow); */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1.5em;
@@ -572,7 +561,7 @@ hr {
     padding: 10px 25px;
     cursor: pointer;
     margin-bottom: 5px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 .works-hover-state-code {
     background: none;
@@ -721,11 +710,6 @@ h4 + p {
     }
     .pattern{
         width: 90vw;
-        /* height: 50vh;
-        bottom: 0;
-        border: 1px solid yellow; 
-        background-size: contain;
-        background-position: bottom left; */
     }
     .container {
         width: 90%;
@@ -733,10 +717,8 @@ h4 + p {
     .logo {
         width: 90px;
         height: 90px;
-        background: url(images/naru-logo-yellow.png) no-repeat;
         background-size: 90px;
         background-position: center;
-        background-color: var(--light-purple);
     }
     .nav {
         padding: 0 5%;
