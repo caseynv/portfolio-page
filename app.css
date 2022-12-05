@@ -194,6 +194,10 @@ button {
 .nav-resume:hover {
     text-decoration: underline;
 }
+/*blog*/
+.blog{
+    text-transform: uppercase;
+}
 /* all yellow buttons */
 .colored-btn {
     padding: 15px 25px;
