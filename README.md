@@ -4,8 +4,11 @@ I'm a software engineer with experience building cloud applications and infrastr
 
 - 🛠️ **I work with:** Java, Python, TypeScript, AWS, REST APIs, DynamoDB, SQL, AWS CDK, and CloudFormation.
 - ☁️ **I've built:** serverless notification workflows, secure service connectivity, deployment infrastructure, and monitoring for production systems.
-- 🎯 **I'm exploring:** Solutions Architect, Software Development Engineer, and Site Reliability Engineer opportunities.
-- 📜 **Certification:** AWS Certified Solutions Architect – Associate.
+- 📜 **Certification:** AWS Certified Solutions Architect
 - 🤝 **I'm open to collaborating on:** cloud architecture, developer tools, and reliable backend systems.
 
-📫 [Email me](mailto:nwandukelechukwu@gmail.com) · [LinkedIn](https://www.linkedin.com/in/kelechukwu-nwandu/) · [Portfolio](https://caseynv.netlify.app/)
+📫 [Email me](mailto:nwandukelechukwu@gmail.com) 
+
+[LinkedIn](https://www.linkedin.com/in/kelechukwu-nwandu/) 
+
+[Portfolio](https://caseynv.netlify.app/)
