@@ -3,3 +3,11 @@
 .sprite{background-image:url("images/portfolio/portfolio-sprite.jpg");background-repeat:no-repeat;background-size:900px 840px}.sprite-multi-region{background-position:0 0}.sprite-api-security{background-position:-450px 0}.sprite-workflow-automation{background-position:0 -140px}.sprite-tax-notifications{background-position:-450px -140px}.sprite-crawler-filter{background-position:0 -280px}.sprite-wikimedia-dashboard{background-position:-450px -280px}.sprite-lab-ai{background-position:0 -420px}.sprite-lab-frontend{background-position:-225px -420px}.sprite-lab-mcp{background-position:-450px -420px}.sprite-lab-cloud{background-position:-675px -420px}.sprite-case-map{background-position:0 -540px}
 
 .project-context{display:block;font-size:8px;color:#8a95a6;margin:0 0 7px;font-weight:600;letter-spacing:.01em}.project-card p{min-height:45px}
+
+/* Low-emphasis credential details; projects remain the primary focus. */
+.credentials-inline{margin-top:28px;border-top:1px solid var(--line);padding-top:18px;max-width:810px}
+.credentials-inline h3{font-size:12px;margin:0 0 9px}
+.credentials-inline p{font-size:11px;line-height:1.65;color:var(--muted);margin:5px 0}
+.credentials-inline p strong{color:var(--ink)}
+.credentials-inline a,.work-credential-note a{color:var(--blue);font-weight:600}
+.work-credential-note{font-size:10px;line-height:1.6;color:var(--muted);margin:0 0 18px}
