@@ -98,6 +98,6 @@ if (menu && nav) {
     if (window.innerWidth > 800) closeMenu();
   });
 }
-const year = document.getElementById("year");
-if (year) year.textContent = new Date().getFullYear();
+const footerYear = document.getElementById("year");
+if (footerYear) footerYear.textContent = new Date().getFullYear();
 render();
