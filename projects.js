@@ -61,7 +61,8 @@ window.PORTFOLIO_PROJECTS=[
     ],
     "learnings": "Travel software is a data-confidence and product-trust problem as much as a scheduling problem: show uncertainty, avoid implicit changes, and design for incomplete external data.",
     "publicNote": "Independent project under active development. Features and provider coverage vary; this case study describes implementation work rather than claiming live booking or universal real-time verification.",
-    "sourceUrl": "https://github.com/caseynv/traveler-app"
+    "sourceUrl": "https://github.com/caseynv/traveler-app",
+    "thumbnail": "images/thumbs/traveler-app.svg"
   },
   {
     "id": "multi-region",
@@ -120,7 +121,8 @@ window.PORTFOLIO_PROJECTS=[
       "Repeatable rollout process"
     ],
     "learnings": "Regional expansion is as much an operational-design problem as an infrastructure problem. The long-term value comes from making the next rollout easier to execute and validate.",
-    "publicNote": "Internal service names and implementation details have been generalized for a public portfolio."
+    "publicNote": "Internal service names and implementation details have been generalized for a public portfolio.",
+    "thumbnail": "images/thumbs/multi-region.svg"
   },
   {
     "id": "regional-cicd",
@@ -179,7 +181,8 @@ window.PORTFOLIO_PROJECTS=[
       "Simpler path for continued expansion"
     ],
     "learnings": "Infrastructure expansion is easier when the delivery system is designed for the target operating model instead of repeatedly extending a legacy pipeline.",
-    "publicNote": "Account names, pipeline names and internal deployment details are intentionally omitted."
+    "publicNote": "Account names, pipeline names and internal deployment details are intentionally omitted.",
+    "thumbnail": "images/thumbs/regional-cicd.svg"
   },
   {
     "id": "vpc-networking",
@@ -238,7 +241,8 @@ window.PORTFOLIO_PROJECTS=[
       "Cross-service rollout"
     ],
     "learnings": "Infrastructure changes scale better when implementation and operational documentation are treated as one deliverable.",
-    "publicNote": "The public version omits internal VPC, subnet, account and service identifiers."
+    "publicNote": "The public version omits internal VPC, subnet, account and service identifiers.",
+    "thumbnail": "images/thumbs/vpc-networking.svg"
   },
   {
     "id": "api-security",
@@ -297,7 +301,8 @@ window.PORTFOLIO_PROJECTS=[
       "Consistent defense-in-depth pattern"
     ],
     "learnings": "Security controls are most useful when they are repeatable, testable and embedded into the normal engineering workflow.",
-    "publicNote": "Internal test-framework and service names have been removed from this public case study."
+    "publicNote": "Internal test-framework and service names have been removed from this public case study.",
+    "thumbnail": "images/thumbs/api-security.svg"
   },
   {
     "id": "invoice-consolidation",
@@ -356,7 +361,8 @@ window.PORTFOLIO_PROJECTS=[
       "Cross-team implementation"
     ],
     "learnings": "Billing workflows become easier to reason about when repeated service interactions are modeled explicitly in the orchestration layer rather than hidden in application code.",
-    "publicNote": "Internal service names and contract identifiers are generalized."
+    "publicNote": "Internal service names and contract identifiers are generalized.",
+    "thumbnail": "images/thumbs/invoice-consolidation.svg"
   },
   {
     "id": "remorse-return",
@@ -415,7 +421,8 @@ window.PORTFOLIO_PROJECTS=[
       "Explicit state-machine orchestration"
     ],
     "learnings": "Workflow APIs are easier to evolve when the external contract and the internal orchestration are designed together but remain separate responsibilities.",
-    "publicNote": "The internal contract name and service topology are not exposed publicly."
+    "publicNote": "The internal contract name and service topology are not exposed publicly.",
+    "thumbnail": "images/thumbs/remorse-return.svg"
   },
   {
     "id": "service-suspension",
@@ -474,7 +481,8 @@ window.PORTFOLIO_PROJECTS=[
       "Clearer lifecycle orchestration"
     ],
     "learnings": "Lifecycle features are easier to operate when state transitions are explicit in both the API model and the orchestration model.",
-    "publicNote": "Internal contract names and dependent-service details have been generalized."
+    "publicNote": "Internal contract names and dependent-service details have been generalized.",
+    "thumbnail": "images/thumbs/service-suspension.svg"
   },
   {
     "id": "tax-notifications",
@@ -534,7 +542,8 @@ window.PORTFOLIO_PROJECTS=[
       "Clearer architecture boundaries"
     ],
     "learnings": "Time-based notification systems become easier to evolve when data ownership, scheduling and downstream processing are explicit architectural responsibilities.",
-    "publicNote": "Operational metrics are intentionally omitted because they are not present in the source project notes."
+    "publicNote": "Operational metrics are intentionally omitted because they are not present in the source project notes.",
+    "thumbnail": "images/thumbs/tax-notifications.svg"
   },
   {
     "id": "operational-runbooks",
@@ -593,7 +602,8 @@ window.PORTFOLIO_PROJECTS=[
       "Dependency and upstream-team guidance"
     ],
     "learnings": "Documentation is part of system design when it determines whether other teams can safely operate, test or extend what was built.",
-    "publicNote": "The public version describes the enablement pattern without exposing account identifiers, role names or internal procedures."
+    "publicNote": "The public version describes the enablement pattern without exposing account identifiers, role names or internal procedures.",
+    "thumbnail": "images/thumbs/operational-runbooks.svg"
   },
   {
     "id": "crawler-filter",
@@ -650,7 +660,8 @@ window.PORTFOLIO_PROJECTS=[
       "Infrastructure as code"
     ],
     "learnings": "Modular pipeline stages are easier to test and evolve because each stage has a clear responsibility and interface.",
-    "publicNote": "No quantitative impact is shown because the uploaded source does not provide a verified metric."
+    "publicNote": "No quantitative impact is shown because the uploaded source does not provide a verified metric.",
+    "thumbnail": "images/thumbs/crawler-filter.svg"
   },
   {
     "id": "wikimedia-dashboard",
@@ -707,6 +718,7 @@ window.PORTFOLIO_PROJECTS=[
       "User-focused presentation"
     ],
     "learnings": "The quality of a user experience depends on the data model and backend flow behind it, not only the visual layer.",
-    "publicNote": "No performance or adoption metrics are included because the uploaded source does not provide them."
+    "publicNote": "No performance or adoption metrics are included because the uploaded source does not provide them.",
+    "thumbnail": "images/thumbs/wikimedia-dashboard.svg"
   }
 ];
