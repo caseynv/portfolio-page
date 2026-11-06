@@ -106,9 +106,49 @@ if (!project) {
       contributions.append(paragraph);
     });
   }
-  const illustration = document.querySelector(".case-image");
-  if (illustration) {
-    illustration.classList.toggle("case-image-traveler", project.id === "traveler-app");
-    illustration.setAttribute("aria-label", "Illustrative visual for " + project.title + "; not a product screenshot");
+  const visual = document.getElementById("case-visual");
+  if (visual) {
+    visual.replaceChildren();
+    visual.classList.toggle("case-visual-product", project.id === "traveler-app");
+    visual.classList.toggle("case-visual-security", project.filters.includes("security"));
+    visual.setAttribute("aria-label", "High-level architecture for " + project.title);
+    const header = document.createElement("div");
+    header.className = "case-visual-heading";
+    const eyebrow = document.createElement("span");
+    eyebrow.textContent = project.id === "traveler-app" ? "INDEPENDENT PRODUCT · SYSTEM VIEW" : "ENGINEERING CASE STUDY · SYSTEM VIEW";
+    const heading = document.createElement("strong");
+    heading.textContent = project.focus;
+    header.append(eyebrow, heading);
+    const steps = document.createElement("ol");
+    steps.className = "case-visual-steps";
+    project.architecture.forEach((step,index) => {
+      const item = document.createElement("li");
+      const num = document.createElement("span");
+      num.className = "case-visual-num";
+      num.textContent = String(index+1).padStart(2,"0");
+      const label = document.createElement("strong");
+      label.textContent = step.label;
+      const note = document.createElement("small");
+      note.textContent = step.note;
+      item.append(num,label,note);
+      steps.append(item);
+    });
+    const disclaimer = document.createElement("small");
+    disclaimer.className = "case-visual-caption";
+    disclaimer.textContent = "Conceptual architecture · public, generalized overview";
+    visual.append(header,steps,disclaimer);
+  }
+  const source = document.getElementById("case-source");
+  if (source && project.sourceUrl) {
+    const url = new URL(project.sourceUrl);
+    if (url.protocol === "https:" && url.hostname === "github.com") {
+      const link = document.createElement("a");
+      link.href = url.href;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = "Explore project repository ↗";
+      source.replaceChildren(link);
+      source.hidden = false;
+    }
   }
 }

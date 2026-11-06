@@ -52,3 +52,18 @@ test('homepage featured links resolve to project IDs', () => {
     assert.ok(projects.some(p=>p.id===match[1]),'Unknown featured project '+match[1]);
   }
 });
+
+test('case studies display data-driven architecture, not a generic image', () => {
+  assert.match(read('case-study.html'), /id="case-visual"/);
+  assert.match(study, /project\.architecture\.forEach/);
+  assert.match(study, /Conceptual architecture/);
+  assert.doesNotMatch(read('case-study.html'), /sprite-case-map/);
+});
+test('Traveler has its own catalogue artwork and repository link', () => {
+  const traveler=projects.find(p=>p.id==='traveler-app');
+  assert.ok(traveler);
+  assert.equal(traveler.sourceUrl,'https://github.com/caseynv/traveler-app');
+  assert.match(app,/project-art-traveler/);
+  assert.match(read('app.css'),/\.project-art-traveler/);
+  assert.match(study,/Explore project repository/);
+});
