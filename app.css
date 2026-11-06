@@ -63,3 +63,27 @@ a:focus-visible,button:focus-visible{outline:3px solid #6954d5;outline-offset:3p
  .key-outcomes>div{grid-template-columns:1fr 1fr}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Data-driven, project-specific architecture visualizations. */
+.case-visual{width:100%;min-height:265px;border-radius:12px;background:linear-gradient(135deg,#0c203b,#173456);color:#fff;padding:23px 25px;display:flex;flex-direction:column;gap:22px;overflow:hidden}
+.case-visual-product{background:linear-gradient(120deg,#271a4b,#4b327a 60%,#814e78)}
+.case-visual-security{background:linear-gradient(120deg,#132541,#193e52 55%,#245262)}
+.case-visual-heading{display:flex;flex-direction:column;gap:7px}
+.case-visual-heading span{font-size:10px;letter-spacing:.13em;font-weight:700;color:#c8d9f3}
+.case-visual-heading strong{font-size:17px;letter-spacing:-.02em}
+.case-visual-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;list-style:none;padding:0;margin:0}
+.case-visual-steps li{min-width:0;display:flex;flex-direction:column;gap:10px;padding:15px 12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.23);border-radius:9px;position:relative}
+.case-visual-steps li:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:42%;color:#fff;z-index:1;font-size:16px}
+.case-visual-num{font-size:11px;color:#c0d6f7;font-weight:700}
+.case-visual-steps strong{font-size:13px;line-height:1.4}
+.case-visual-steps small{font-size:11px;line-height:1.45;color:#e0e8f5}
+.case-visual-caption{font-size:10px;color:#d2ddef;margin-top:auto}
+.case-source{margin:12px 0}
+.case-source a{display:inline-flex;padding:9px 13px;border:1px solid #d8deed;border-radius:8px;color:var(--blue);font-size:12px;font-weight:700}
+.case-source a:hover{background:#f3f5ff}
+.project-art-traveler{background:radial-gradient(circle at 80% 24%,#edb09d 0 10%,transparent 11%),linear-gradient(140deg,#30204f 5%,#685394 65%,#a77998);padding:22px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;position:relative;overflow:hidden}
+.project-art-traveler::before{content:"";position:absolute;top:22px;right:65px;width:100px;height:60px;border:2px dashed rgba(255,255,255,.65);border-bottom:0;border-left:0;border-radius:80% 100% 0 0;transform:rotate(-12deg)}
+.project-art-traveler .project-art-mark{font-size:19px;letter-spacing:.17em;font-weight:800;color:#fff}
+.project-art-traveler small{font-size:11px;letter-spacing:.03em;color:#f4e8ff}
+@media(max-width:800px){.case-visual-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.case-visual-steps li:nth-child(2)::after{display:none}}
+@media(max-width:440px){.case-visual{padding:18px 14px}.case-visual-steps{grid-template-columns:1fr}.case-visual-steps li::after{display:none!important}.case-visual-heading strong{font-size:15px}}
