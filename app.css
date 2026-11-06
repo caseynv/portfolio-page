@@ -11,3 +11,55 @@
 .credentials-inline p strong{color:var(--ink)}
 .credentials-inline a,.work-credential-note a{color:var(--blue);font-weight:600}
 .work-credential-note{font-size:10px;line-height:1.6;color:var(--muted);margin:0 0 18px}
+
+/* Portfolio QA: fluid media, readable case studies and accessible interactions. */
+html{scroll-padding-top:110px}
+body{overflow-x:hidden}
+a:focus-visible,button:focus-visible{outline:3px solid #6954d5;outline-offset:3px}
+[hidden]{display:none!important}
+.selected-section,.contact-section{width:min(90%,1180px)}
+.page,.case-page{width:min(90%,1130px)}
+.page{max-width:917px}
+.case-page{max-width:1130px}
+.case-main,.case-head>*,.project-card{min-width:0}
+.case-image{width:100%;max-width:100%;height:auto;aspect-ratio:3/1}
+.project-art{width:100%;max-width:100%;height:140px}
+.lab-art{width:100%;max-width:100%;height:120px}
+.project-card h3,.selected-grid h3{font-size:15px}
+.project-card p,.selected-grid p,.lab-grid p{font-size:13px;line-height:1.6}
+.project-context,.tag{font-size:10px}
+.case-main>p,.case-content p,.case-content li{font-size:14px;line-height:1.7}
+.glance strong,.glance span,.case-tabs a,.back,.full-case,.public-note{font-size:12px}
+.key-outcomes p{font-size:12px!important}
+.flow-node span,.flow-node strong,.flow-node small{font-size:11px}
+.flow-node{min-width:135px}
+.work-with p,.journey-track span{font-size:11px}
+.lab-grid a,.lab-status{display:inline-block;margin-top:12px;font-size:12px;font-weight:600}
+.lab-grid a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+.lab-status{color:var(--muted)}
+.empty-state{font-size:14px;color:var(--muted);padding:16px}
+.case-not-found{padding:75px 0;max-width:620px}
+.case-not-found h1{font-size:36px}
+.case-not-found p{font-size:16px;line-height:1.6;color:var(--muted)}
+.case-not-found a{display:inline-block;margin-top:10px;color:var(--blue);font-weight:700}
+.case-image-traveler{background-image:linear-gradient(135deg,#26194f,#6b4fa5 50%,#d68b85);position:relative}
+.case-image-traveler::after{content:"TRAVELER  /  INTELLIGENT TRAVEL PLANNING";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;color:#fff;font-weight:700;letter-spacing:.09em;font-size:clamp(13px,2.2vw,23px)}
+@media(max-width:800px){
+ .case-tabs{gap:18px;overflow-x:auto;white-space:nowrap}
+ .case-tabs a{flex:0 0 auto}
+ .case-image{aspect-ratio:16/9}
+ .topbar nav a{font-size:14px;min-height:36px;display:flex;align-items:center}
+ .page,.case-page{padding-top:32px}
+ .lab-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:520px){
+ .hero-actions{flex-wrap:wrap}
+ .lab-grid{grid-template-columns:1fr}
+ .section-row{gap:15px}
+ .case-head{gap:14px}
+ .case-image{aspect-ratio:4/3}
+ .case-tabs{gap:14px}
+ .case-content h2{font-size:21px}
+ .key-outcomes>div{grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
