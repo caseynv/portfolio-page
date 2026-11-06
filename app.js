@@ -22,6 +22,15 @@ function render(filter = "all") {
     const art = document.createElement("div");
     art.className = "project-art sprite sprite-" + (project.visual || project.id);
     art.setAttribute("aria-hidden", "true");
+    if (project.id === "traveler-app") {
+      art.className = "project-art project-art-traveler";
+      const mark = document.createElement("span");
+      mark.className = "project-art-mark";
+      mark.textContent = "TRAVELER";
+      const tagline = document.createElement("small");
+      tagline.textContent = "Discover · Plan · Explore";
+      art.append(mark, tagline);
+    }
     const body = document.createElement("div");
     body.innerHTML = `<span class="tag ${tagClass(project)}">${escapeHtml(project.category.toUpperCase())}</span>
       <h3>${escapeHtml(project.title)}</h3>
