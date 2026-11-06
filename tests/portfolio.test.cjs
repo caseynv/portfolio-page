@@ -63,8 +63,8 @@ test('Traveler has its own catalogue artwork and repository link', () => {
   const traveler=projects.find(p=>p.id==='traveler-app');
   assert.ok(traveler);
   assert.equal(traveler.sourceUrl,'https://github.com/caseynv/traveler-app');
-  assert.match(app,/project-art-traveler/);
-  assert.match(read('app.css'),/\.project-art-traveler/);
+  assert.equal(traveler.thumbnail,'images/thumbs/traveler-app.svg');
+  assert.match(app,/image\.src = project\.thumbnail/);
   assert.match(study,/Explore project repository/);
 });
 
