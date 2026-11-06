@@ -20,17 +20,16 @@ function render(filter = "all") {
     const card = document.createElement("article");
     card.className = "project-card";
     const art = document.createElement("div");
-    art.className = "project-art sprite sprite-" + (project.visual || project.id);
-    art.setAttribute("aria-hidden", "true");
-    if (project.id === "traveler-app") {
-      art.className = "project-art project-art-traveler";
-      const mark = document.createElement("span");
-      mark.className = "project-art-mark";
-      mark.textContent = "TRAVELER";
-      const tagline = document.createElement("small");
-      tagline.textContent = "Discover · Plan · Explore";
-      art.append(mark, tagline);
-    }
+    art.className = "project-art";
+    const image = document.createElement("img");
+    image.className = "project-thumb-img";
+    image.src = project.thumbnail;
+    image.alt = "Conceptual illustration of " + project.title;
+    image.width = 800;
+    image.height = 300;
+    image.loading = "lazy";
+    image.decoding = "async";
+    art.append(image);
     const body = document.createElement("div");
     body.innerHTML = `<span class="tag ${tagClass(project)}">${escapeHtml(project.category.toUpperCase())}</span>
       <h3>${escapeHtml(project.title)}</h3>
