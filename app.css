@@ -87,3 +87,8 @@ a:focus-visible,button:focus-visible{outline:3px solid #6954d5;outline-offset:3p
 .project-art-traveler small{font-size:11px;letter-spacing:.03em;color:#f4e8ff}
 @media(max-width:800px){.case-visual-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.case-visual-steps li:nth-child(2)::after{display:none}}
 @media(max-width:440px){.case-visual{padding:18px 14px}.case-visual-steps{grid-template-columns:1fr}.case-visual-steps li::after{display:none!important}.case-visual-heading strong{font-size:15px}}
+
+/* Dedicated vector thumbnails - a single consistent 8:3 crop per project. */
+.project-art{aspect-ratio:8/3;height:auto;min-height:0;max-height:none;overflow:hidden;background:#14243c}
+.project-thumb-img{display:block;width:100%;height:100%;object-fit:cover}
+@media(max-width:520px){.project-art{aspect-ratio:8/3}}
