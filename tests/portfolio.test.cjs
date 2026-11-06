@@ -67,3 +67,16 @@ test('Traveler has its own catalogue artwork and repository link', () => {
   assert.match(read('app.css'),/\.project-art-traveler/);
   assert.match(study,/Explore project repository/);
 });
+
+test('each project has a matching local SVG thumbnail', () => {
+  for (const project of projects) {
+    assert.equal(project.thumbnail, 'images/thumbs/' + project.id + '.svg');
+    const image = read(project.thumbnail);
+    assert.match(image, /<svg xmlns="http:\/\/www\.w3\.org\/2000\/svg"/);
+    assert.match(image, /<title id="title">/);
+    assert.match(image, /<desc id="desc">/);
+    assert.ok(!/<script\b|<foreignObject\b|onload\s*=|href\s*=\s*["']https?:/i.test(image), 'Unsafe SVG: ' + project.id);
+  }
+  assert.match(app, /image\.src = project\.thumbnail/);
+  assert.match(read('app.css'), /\.project-thumb-img/);
+});
