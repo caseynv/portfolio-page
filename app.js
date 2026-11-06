@@ -1,4 +1,4 @@
-const projects=window.PORTFOLIO_PROJECTS||[];
+const portfolioProjects=window.PORTFOLIO_PROJECTS||[];
 
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, char => ({
@@ -15,7 +15,7 @@ function render(filter = "all") {
   const grid = document.getElementById("project-grid");
   if (!grid) return;
   grid.replaceChildren();
-  const visible = projects.filter(project => filter === "all" || project.filters.includes(filter));
+  const visible = portfolioProjects.filter(project => filter === "all" || project.filters.includes(filter));
   visible.forEach(project => {
     const card = document.createElement("article");
     card.className = "project-card";
