@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Private Portfolio Analytics</title><style>
+:root{font-family:system-ui,sans-serif;color-scheme:dark}body{margin:0;padding:clamp(16px,4vw,60px);background:#0b1221;color:#e9efff}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}button,input{padding:10px;border-radius:8px;border:1px solid #64748b;background:#142139;color:#fff}
+button{cursor:pointer}main{max-width:1100px;margin:auto}.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:24px 0}
+.metric,.journey{border:1px solid #334155;border-radius:12px;padding:18px;background:#142139}.metric strong{display:block;font-size:32px;margin-top:8px}
+.journey{margin:12px 0}.journey ol{padding-left:24px}.journey li{margin:8px 0}small{color:#a4b1c7}#error{color:#ffc3c3}
+</style></head><body><main><header><div><h1>Portfolio Intelligence</h1><p>Private, anonymous visitor analytics</p></div><button id="refresh">Refresh</button></header>
+<p><label for="token">Admin access token (never saved in browser storage)</label> <input id="token" type="password" autocomplete="off" size="32" placeholder="Paste private admin token"></p>
+<p id="error" role="status"></p><section class="metrics" id="metrics" aria-label="Analytics metrics"></section><h2>Visitor journeys</h2><section id="journeys"></section>
+</main><script>
+const $=id=>document.getElementById(id);
+function metric(label,value){const el=document.createElement("div");el.className="metric";const title=document.createElement("small");title.textContent=label;const number=document.createElement("strong");number.textContent=value;el.append(title,number);return el;}
+async function load(){
+ $("error").textContent="";
+ const token=$("token").value;
+ if(!token){$("error").textContent="Enter your admin access token.";return;}
+ const response=await fetch("/.netlify/functions/portfolio-admin",{headers:{authorization:"Bearer "+token},cache:"no-store"});
+ if(!response.ok){$("error").textContent="Access denied or analytics not configured ("+response.status+").";return;}
+ const data=await response.json();
+ $("metrics").replaceChildren(metric("Events in last 24h",data.last24h),metric("Sessions in last 24h",data.sessions),metric("Resume clicks in recent events",data.resumeClicks),metric("Contact clicks in recent events",data.contactClicks));
+ $("journeys").replaceChildren();
+ for(const session of data.journeys){
+ const card=document.createElement("article");card.className="journey";
+ const header=document.createElement("h3");header.textContent="Anonymous visitor "+session.id;
+ const info=document.createElement("small");info.textContent="Referrer: "+session.source+" · Last seen: "+new Date(session.last).toLocaleString();
+ const list=document.createElement("ol");
+ for(const event of [...session.events].reverse()){const li=document.createElement("li");li.textContent=event.type+" · "+(event.project||event.page)+" · "+new Date(event.created_at).toLocaleTimeString();list.append(li);}
+ card.append(header,info,list);$("journeys").append(card);
+ }
+}
+$("refresh").addEventListener("click",()=>load().catch(()=>{$("error").textContent="Unable to load analytics.";}));
+</script></body></html>
